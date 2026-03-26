@@ -116,3 +116,28 @@ button:hover {
 #trending img:hover {
     transform: scale(1.1);
 }
+
+.ott-logos {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin: 8px 0;
+}
+
+.ott-logo {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    background: white;
+    border-radius: 6px;
+    padding: 3px;
+}
+
+.ott-names {
+    font-size: 12px;
+    color: #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+}
