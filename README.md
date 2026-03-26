@@ -3,6 +3,9 @@
 A movie discovery app powered entirely by the **OMDB API**  
 ## ⚡ Setup
 
+- 🌐 Live Demo
+https://anushkaverse10.github.io/Cinematch-V1/
+
 1. Get a **free OMDB API key** at https://www.omdbapi.com/apikey.aspx
 2. Open `script.js` and replace the key on line 3:
    ```js
@@ -38,6 +41,4 @@ A movie discovery app powered entirely by the **OMDB API**
 - `script.js` — All logic (OMDB only)
 - `style.css` — Styling
 
-- 🌐 Live Demo
-https://anushkaverse10.github.io/Cinematch-V1/
 
