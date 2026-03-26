@@ -27,6 +27,32 @@ function getUnderrated() {
         .then(data => displayMovies(data.results));
 }
 
+function getUpcoming() {
+    fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`)
+        .then(res => res.json())
+        .then(data => displayMovies(data.results));
+}
+
+function getBlockbusters() {
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc`)
+        .then(res => res.json())
+        .then(data => displayMovies(data.results));
+}
+
+function getSimilar() {
+    const query = document.getElementById("search").value;
+
+    fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`)
+        .then(res => res.json())
+        .then(data => displayMovies(data.results));
+}
+
+function getInTheatres() {
+    fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}`)
+        .then(res => res.json())
+        .then(data => displayMovies(data.results));
+}
+
 function searchMovie() {
     const query = document.getElementById("search").value;
     const language = document.getElementById("language").value;
@@ -99,21 +125,20 @@ function getPlatform(movieId) {
                 const logos = {
                     "Netflix": "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
                     "Amazon Prime Video": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png",
-                    "Disney Plus": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg"
-                    "Hulu": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Hulu_Logo.svg"
-                    "SonylLIV": "https://upload.wikimedia.org/wikipedia/en/0/0e/SonyLIV_logo.png"
-                    "Zee5": "https://upload.wikimedia.org/wikipedia/en/8/8e/ZEE5_logo.png"
-                    "Hotstar": "https://upload.wikimedia.org/wikipedia/en/1/1b/Disney%2B_Hotstar_logo.svg"
-                    "Voot": "https://upload.wikimedia.org/wikipedia/en/4/4e/Voot_logo.png"
-                    "MX Player": "https://upload.wikimedia.org/wikipedia/en/5/5e/MX_Player_logo.png"
-                    "Sony Crackle": "https://upload.wikimedia.org/wikipedia/en/0/0e/SonyLIV_logo.png"
-                    "Apple TV Plus": "https://upload.wikimedia.org/wikipedia/en/1/1b/Apple_TV_Plus_logo.svg"
-                    "HBO Max": "https://upload.wikimedia.org/wikipedia/en/1/1b/HBO_Max_Logo.svg"
-                    "Peacock": "https://upload.wikimedia.org/wikipedia/en/1/1b/Peacock_Logo.svg"
-                    "Paramount Plus": "https://upload.wikimedia.org/wikipedia/en/1/1b/Paramount_Plus_logo.svg"
-                    "Starz": "https://upload.wikimedia.org/wikipedia/en/1/1b/Starz_logo.svg"
-                    "Hoichoi": "https://upload.wikimedia.org/wikipedia/en/1/1b/Hoichoi_logo.png"
-                    ""
+                    "Disney Plus": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg",
+                    "Hulu": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Hulu_Logo.svg",
+                    "SonylLIV": "https://upload.wikimedia.org/wikipedia/en/0/0e/SonyLIV_logo.png",
+                    "Zee5": "https://upload.wikimedia.org/wikipedia/en/8/8e/ZEE5_logo.png",
+                    "Hotstar": "https://upload.wikimedia.org/wikipedia/en/1/1b/Disney%2B_Hotstar_logo.svg",
+                    "Voot": "https://upload.wikimedia.org/wikipedia/en/4/4e/Voot_logo.png",
+                    "MX Player": "https://upload.wikimedia.org/wikipedia/en/5/5e/MX_Player_logo.png",
+                    "Sony Crackle": "https://upload.wikimedia.org/wikipedia/en/0/0e/SonyLIV_logo.png",
+                    "Apple TV Plus": "https://upload.wikimedia.org/wikipedia/en/1/1b/Apple_TV_Plus_logo.svg",
+                    "HBO Max": "https://upload.wikimedia.org/wikipedia/en/1/1b/HBO_Max_Logo.svg",
+                    "Peacock": "https://upload.wikimedia.org/wikipedia/en/1/1b/Peacock_Logo.svg",
+                    "Paramount Plus": "https://upload.wikimedia.org/wikipedia/en/1/1b/Paramount_Plus_logo.svg",
+                    "Starz": "https://upload.wikimedia.org/wikipedia/en/1/1b/Starz_logo.svg",
+                    "Hoichoi": "https://upload.wikimedia.org/wikipedia/en/1/1b/Hoichoi_logo.png",
                 };
 
                 let html = "📺 ";
