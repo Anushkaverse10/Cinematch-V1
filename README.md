@@ -37,3 +37,7 @@ A movie discovery app powered entirely by the **OMDB API**
 - `favorites.html` — Saved movies
 - `script.js` — All logic (OMDB only)
 - `style.css` — Styling
+
+- 🌐 Live Demo
+https://anushkaverse10.github.io/Cinematch-V1/
+
