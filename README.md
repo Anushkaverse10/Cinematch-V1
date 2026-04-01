@@ -11,8 +11,6 @@ https://anushkaverse10.github.io/Cinematch-V1/
 
 1. Get a **free OMDB API key** at https://www.omdbapi.com/apikey.aspx
    ```
-3. Open `index.html` in your browser — done!
-
 > The free OMDB plan allows **1,000 requests/day**.
 
 ## ✨ Features
